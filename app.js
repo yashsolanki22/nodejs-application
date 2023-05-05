@@ -7,6 +7,13 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/create', (req, res) => {
+  res.sendFile(__dirname + '/form.html');
+});
+
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
+
+module.exports = app
